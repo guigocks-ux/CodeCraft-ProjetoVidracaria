@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jidraçaria JK</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<!-- Header -->    
+<header class="py-3 bg-white">
+    
+    <div class="container d-flex justify-content-between align-items-center"> 
+        
+        <div class="d-flex align-items-center me-3 logo-wrapper"> 
+            <a href="/" class="d-flex align-items-center" aria-label="Vidraçaria JK - Página Inicial"> 
+                <img src="logo.png" alt="Logo Vidraçaria JK" height="32" class="img-fluid">
+            </a> 
+        </div>
+
+        <div class="d-none d-md-flex align-items-center border-bottom pb-3 me-3 area-da-linha flex-grow-1"> 
+            <ul class="nav nav-pills ms-auto"> 
+                <li class="nav-item"><a href="#localizacaoAtalho" class="nav-link text-black">Onde estamos</a></li> 
+                <li class="nav-item"><a href="#avaliacoesAtalho" class="nav-link text-black">Feedback dos clientes</a></li> 
+                <li class="nav-item"><a href="#produtosAtalho" class="nav-link text-black">Produtos</a></li> 
+            </ul> 
+        </div>
+        
+        <div class="d-flex d-md-none align-items-center me-3 ms-auto"> 
+            <a href="#localizacaoAtalho" class="nav-link nav-pills text-black">Onde estamos</a>
+        </div>
+
+        <div class="d-flex align-items-center ms-3">
+            <a href="https://wa.me/554599205471" target="_blank" class="btn btn-success rounded-pill" role="button">
+            <i class="bi bi-whatsapp me-2"></i>
+            Fale Conosco
+            </a>
+        </div>
+        
+    </div> 
+    <div class="mb-4 d-md-block d-none"></div> 
+</header>
+
+    <main>
+
+    <!-- Tela inicial -->
+    <section class="container mt-5 py-5">
+    <div class="row align-items-center">
+        
+        <div class="col-md-5 text-center mb-4 mb-md-0">
+            <img src="logo2.png" alt="Logo Principal Vidraçaria JK" class="img-fluid hero-logo">
+        </div>
+        
+        <div class="col-md-7 hero-text">
+            <p class="h2 mb-4">
+                Vidros e Esquadrias com a Qualidade e Segurança que o seu projeto merece é só na vidraçaria JK!
+            </p>
+        </div>
+    </div>
+</section>
+
+    <!-- Fachada -->
+    <figure class="container-fluid p-0 mt-5 mb-5">
+        <div class="row g-0">
+            <div class="col-12">
+                <img src="fachada.png" alt="Fachada moderna com vidros e iluminação colorida, representando projetos da vidraçaria JK" class="img-fluid w-100" id="banner-fachada">
+            </div> 
+        </div>
+    </figure>
+
+    <!-- Foto da loja e localizacao -->
+    <figure class="container-fluid py-5 bg-light-custom px-4 md-5"> 
+        <div class="row g-5 justify-content-center">
+            <div class="col-md-6">
+                <img src="loja.png" alt="Foto da fachada da Vidraçaria JK" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-md-6">
+                <img src="localizacao.png" alt="Tá procurando a gente? Vem nos visitar. Endereço: Avenida Felipe Wandscheer, 4070 Três Pinheiros" class="img-fluid rounded shadow-sm">
+            </div>
+        </div>
+    </figure>
+
+    <!-- Produtos -->
+    <section id="produtosAtalho" class="container py-4"> 
+        <div class="text-center text-md-start mb-4"> 
+            <h2 class="display-6 fw-bold text-dark">PRODUTOS</h2>
+            <p class="h4 text-secondary fw-light">Confira nossas especialidades!</p>
+        </div>
+
+        <div class="row g-5"> 
+            
+            <article class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="guardaCorpo.jpg" class="card-img-top img-card-produtos" alt="Guarda-corpo de vidro para escadas e varandas">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Guarda-corpo de vidro</h5>
+                        <p class="card-text text-secondary texto-card-pequeno">
+                            Projetado para oferecer segurança sem abrir mão da estética. O guarda-corpo de vidro traz leveza ao ambiente, valoriza a arquitetura e garante resistência, sendo ideal para escadas, varandas e corredores.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="portasJanelas.jpg" class="card-img-top img-card-produtos" alt="Portas e janelas de vidro em fachada moderna">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Portas e janelas de vidro</h5>
+                        <p class="card-text text-secondary texto-card-pequeno">
+                            Perfeitas para quem busca modernidade e praticidade. As portas e janelas de vidro proporcionam maior iluminação natural, conforto térmico e um design sofisticado que transforma qualquer espaço.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="divisorias.jpg" class="card-img-top img-card-produtos" alt="Divisórias de vidro em sala comercial">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Divisórias de vidro</h5>
+                        <p class="card-text text-secondary texto-card-pequeno">
+                            Solução elegante e funcional para separar ambientes sem perder a sensação de amplitude. As divisórias de vidro unem praticidade, estilo e versatilidade, adequando-se a diferentes tipos de projetos.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="espelhosDecorativos.jpg" class="card-img-top img-card-produtos" alt="Espelhos decorativos em sala">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Espelhos decorativos</h5>
+                        <p class="card-text text-secondary texto-card-pequeno">
+                            Muito mais do que utilidade, os espelhos decorativos são peças que ampliam o espaço, refletem a luminosidade e agregam sofisticação à decoração, deixando cada detalhe mais valorizado.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="espelhosModernos.jpg" class="card-img-top img-card-produtos" alt="Espelhos modernos com design diferenciado">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Espelhos modernos</h5>
+                        <p class="card-text text-secondary texto-card-pequeno">
+                            Com design diferenciado e acabamento de alta qualidade, os espelhos modernos trazem personalidade ao ambiente, criando composições únicas que seguem as principais tendências da decoração.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="portasEntrada.jpg" class="card-img-top img-card-produtos" alt="Portas de entrada robustas em vidro">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Portas de entrada</h5>
+                        <p class="card-text text-secondary texto-card-pequeno">
+                            Robustas, elegantes e resistentes, as portas de entrada em vidro destacam-se pelo impacto visual e pela durabilidade, transmitindo imponência e modernidade logo na chegada do imóvel.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Porque nos escolher -->
+    <section class="container py-5">
+        <div class="row align-items-center g-4">
+            <div class="col-md-6">
+                <img src="vidraceiro.png" 
+                    alt="Profissional instalando vidro, simbolizando precisão e qualidade" 
+                    class="img-fluid rounded shadow-sm">
+            </div>
+            
+            <div class="col-md-6">
+                <h2 class="display-6 fw-bold text-dark mb-3">PORQUE NOS ESCOLHER?</h2>
+                <p class="h4 subtitle mb-4">Qualidade e confiança em cada projeto!</p>
+                <p class="text-secondary corpo-fonte">
+                    Escolher a vidraçaria certa é investir em segurança, sofisticação e tranquilidade.
+                </p>
+                <p class="text-secondary corpo-fonte">
+                    Na JK Vidros, unimos tradição e inovação para oferecer soluções em vidro que valorizam cada detalhe do seu espaço. Trabalhamos com materiais de alta qualidade e equipe especializada, garantindo projetos duradouros, esteticamente refinados e executados com precisão. Nosso compromisso vai além da instalação: buscamos entender as necessidades de cada cliente para entregar resultados que unem funcionalidade e beleza, transformando ambientes com transparência, elegância e confiança.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seguranca -->
+    <section class="container py-5">
+        <div class="row align-items-center g-4">
+            <div class="col-md-6">
+                <h2 class="titulo-seguranca fw-bold text-dark mb-4">
+                    SEU PROJETO COM A SEGURANÇA <br> QUE ELE MERECE
+                </h2>
+                <h4 class="subtitle-seguranca fw-normal mb-4 ">
+                    Qualidade superior e tranquilidade garantida para cada instalação.
+                </h4>
+                <div class="w-75">
+                <p class="text-secondary mb-5 texto-seguranca" style="line-height: 1.6;">
+                    Na hora de escolher os vidros para sua casa ou empresa, cada detalhe faz a diferença. Garanta não só a beleza, mas também a segurança, a economia e o conforto que o seu espaço precisa. Nossa equipe está pronta para te guiar, tirando todas as suas dúvidas e encontrando a solução ideal para você.
+                </p>
+                </div>
+                <a href="https://api.whatsapp.com/send?phone=554599205471" 
+                   target="_blank" 
+                   class="btn btn-lg btn-custom-cta fw-bold shadow-lg">
+                    FALE COM UM ESPECIALISTA
+                </a>
+            </div>
+            
+            <div class="col-md-6 position-relative" style="min-height: 400px;">
+                <img src="boxBanheiro.jpg" 
+                    alt="Box de vidro de banheiro moderno" 
+                    class="img-fluid rounded shadow-sm img-sobreposta img-main">
+                
+                <img src="portaMesa.jpg" 
+                    alt="Janela grande em ambiente interno, iluminação natural" 
+                    class="img-fluid rounded shadow-sm img-sobreposta img-mid">
+                    
+                <img src="portasCanto.jpg" 
+                    alt="Porta de balcão de vidro em cozinha externa" 
+                    class="img-fluid rounded shadow-sm img-sobreposta img-bottom">
+            </div>
+        </div>
+    </section>
+
+    <!-- Localizacao -->
+    <section id="localizacaoAtalho" class="container-fluid py-5">
+        <div class="container">
+            <div class="row">
+                <h2 class="titulo-localizacao fw-bold text-dark mb-4">
+                    LOCALIZAÇÃO
+                </h2>
+                <div class="col-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599.669773621319!2d-54.54968782482427!3d-25.549374577485914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f69171dd545e89%3A0x741578a8c2df27a5!2sVidra%C3%A7aria%20JK!5e0!3m2!1spt-BR!2sbr!4v1762980577239!5m2!1spt-BR!2sbr" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avaliacoes -->
+   <section id="avaliacoesAtalho" class="container py-4" id="feedback-clientes">
+    
+    <div class="text-center text-md-start mb-5"> 
+        <h2 class="display-6 fw-bold text-dark">AVALIAÇÕES</h2>
+    </div>
+    
+    <div class="row g-4 justify-content-center">
+        
+        <article class="col-lg-3 col-md-6">
+            <div class="card bg-dark text-white p-4 shadow-sm h-100 card-review">
+                <div class="mb-3 text-warning fs-4">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <h5 class="card-title fw-bold">Trabalho de primeira qualidade!</h5>
+                <p class="card-text text-light">
+                    "Serviço de alta, qualidade, profissionais muitos gentis, entendem muito do assunto.Recomendo."
+                </p>
+                <div class="d-flex align-items-center mt-3">
+                    <img src="clienteFeliz1.png" alt="Avatar do Cliente João" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;"> 
+                    <div>
+                        <small class="fw-bold d-block">Maria C..</small>
+                        <small class="text-secondary d-block" style="font-size: 0.85rem;">05 de Junho, 2025</small>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="col-lg-3 col-md-6">
+            <div class="card bg-dark text-white p-4 shadow-sm h-100 card-review">
+                <div class="mb-3 text-warning fs-4">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                </div>
+                <h5 class="card-title fw-bold">Compromisso e pontualidade</h5>
+                <p class="card-text text-light">
+                    "Agilidade no trabalho, super profissionais e deixaram tudo limpo depois que terminaram o serviço."
+                </p>
+                <div class="d-flex align-items-center mt-3">
+                    <img src="clienteFeliz2.png" alt="Avatar da Cliente Maria" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;"> 
+                    <div>
+                        <small class="fw-bold d-block">João M.</small>
+                        <small class="text-secondary d-block" style="font-size: 0.85rem;">12 de Janeiro, 2025</small>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="col-lg-3 col-md-6">
+            <div class="card bg-dark text-white p-4 shadow-sm h-100 card-review">
+                <div class="mb-3 text-warning fs-4">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <h5 class="card-title fw-bold">Profissionais de Confiança</h5>
+                <p class="card-text text-light">
+                    "Estão de parabéns essa equipe muito atenciosa, um belo trabalho, super indico👏👏👏"
+                </p>
+                <div class="d-flex align-items-center mt-3">
+                    <img src="clienteFeliz3.png" alt="Avatar do Cliente Pedro" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;"> 
+                    <div>
+                        <small class="fw-bold d-block">Carolina L.</small>
+                        <small class="text-secondary d-block" style="font-size: 0.85rem;">18 de Maio, 2025</small>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+         <article class="col-lg-3 col-md-6">
+            <div class="card bg-dark text-white p-4 shadow-sm h-100 card-review">
+                <div class="mb-3 text-warning fs-4">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                </div>
+                <h5 class="card-title fw-bold">Especialistas Comprometidos</h5>
+                <p class="card-text text-light">
+                    "Serviço de qualidade, profissionais empenhados e dispostos a nos atender da melhor forma."
+                </p>
+                <div class="d-flex align-items-center mt-3">
+                    <img src="clienteFeliz4.png" alt="Avatar da Cliente Maria" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;"> 
+                    <div>
+                        <small class="fw-bold d-block">Pedro S.</small>
+                        <small class="text-secondary d-block" style="font-size: 0.85rem;">12 de Junho, 2025</small>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+       <div class="container py-2">
+    <p class="text-start text-secondary" style="font-size: 0.5rem;">
+        *As avaliações são baseadas em depoimentos reais de nossos clientes, sendo os nomes e fotos alterados para proteção da privacidade.
+    </p>
+</div>
+
+        
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+    <footer class="main-footer">
+    
+    <div class="linha-destaque-azul"></div>
+    
+    <div class="container footer-content-custom-wrapper">
+        <div class="footer-content-custom"> 
+            
+            <div class="footer-info">
+                <section class="footer-contacts">
+                    <h2>CONTATOS</h2>
+                    <p>E-mail: vidracariajkfoz@gmail.com</p>
+                    <p>Telefone: (45)99920-5471</p>
+                </section>
+        
+                <section class="footer-hours">
+                    <h2>HORÁRIOS DE FUNCIONAMENTO</h2>
+                    <p>Segunda a sexta: 08:30 as 18:00</p>
+                    <p>Sábados e domingos: fechado</p>
+                </section>
+                
+                <section class="footer-copyright">
+                    <p class="copyright-text">© 2025 Vidraçaria JK. Todos os direitos reservados.</p>
+                </section>
+            </div>
+            
+            <div class="footer-social">
+    <p class="social-text">Acompanhe nosso trabalho nas redes sociais</p>
+    <div class="social-icons">
+        
+        <a href="https://www.instagram.com/vidracariajk_ofc/" target="_blank" aria-label="Instagram" class="icon-link instagram-icon">
+    <div class="social-icon-wrapper"> 
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="Instagram Logo" style="width: 28px; height: 28px;">
+    </div>
+</a>
+        
+        <a href="https://www.facebook.com/share/1Be1tipfS5/" aria-label="Facebook" class="icon-link facebook-icon">
+            <div class="social-icon-wrapper"> 
+                <i class="fab fa-facebook-f"></i>
+            </div>
+        </a>
+        
+    </div>
+</div>
+            
+        </div>
+    </div>
+    
+    </footer>

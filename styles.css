@@ -1,0 +1,806 @@
+* {
+    box-sizing: border-box; 
+}
+
+body, html {
+    margin: 0 !important; 
+    padding: 0 !important;
+    width: 100%;
+    overflow-x: hidden; 
+}
+
+
+/*=================*/
+/*CSS para a header*/
+/*=================*/
+
+.logo-wrapper a img {
+    height: 60px !important; 
+    width: auto !important;
+}
+
+/* Move a área de links para o lugar certo */
+.area-da-linha {
+    /* Deixe o Flexbox fazer o trabalho, sem margens agressivas */
+    flex-grow: 1; 
+}
+
+/* Os links ficam na direita da área da linha*/
+.area-da-linha > .nav {
+    margin-left: auto; /* Empurra os links para a direita dentro da div de links */
+}
+
+.btn-success.rounded-pill {
+    padding: 15px 20px; 
+    font-size: 20px; /* Garante que o texto dentro dele seja um tamanho padrão */
+    margin-top:0;
+}
+
+.nav-pills .nav-link {
+    background-color: #f8f9fa; /* FUNDO CINZA CLARO (Este é o código da box) */
+    border-radius: 6px;        /* Bordas arredondadas */
+    margin-right: 12px;        /* Espaçamento entre os links */
+    padding: 8px 16px;         /* Aumenta a área da box */
+    color: black !important;   /* Garante que o texto seja preto */
+    font-size: 1.1rem;       /* Aumenta o tamanho da fonte. Tente 1rem, 1.1rem ou 16px */
+    font-weight: 400;      /* Deixa a fonte mais negrito/preta. Tente 600 (semi-bold) ou 700 (bold) */
+}
+.nav-pills .nav-link:hover {
+    background-color: #e9ecef; /* Efeito ao passar o mouse */
+}
+
+@media (max-width: 576px) { 
+    .btn-success.rounded-pill {
+        padding: 10px 12px; /* Padding menor */
+    }
+    /* Ajuste para logo menor no mobile */
+    .logo-wrapper a img {
+        height: 45px !important;
+    }
+    .container > .d-flex.d-md-none {
+        flex-grow: 1; /* Força esta div a ocupar todo o espaço central restante */
+        justify-content: flex-start; /* Alinha o texto do link à esquerda desse espaço (visual mais limpo) */
+    }
+    .d-none.d-md-flex .nav-item {
+        display: none !important;
+    }
+    .container > .d-flex.d-md-none > .nav-link {
+        /* Pega o estilo de box do nav-pills que estava na ul */
+        background-color: #f8f9fa; 
+        border-radius: 6px; 
+        padding: 8px 16px; 
+    }
+    
+    /* Garante que o link ocupe o espaço central */
+    .container > .d-flex.d-md-none {
+    justify-content: flex-start; 
+    }
+}
+
+
+
+/*===============================*/
+/*CSS para a tela inicial do site*/
+/*===============================*/
+
+.hero-logo {
+    /* Garante que a logo não seja muito grande em telas maiores */
+    max-width: 110%; 
+    height: auto;
+}
+
+.hero-text p {
+    font-family: 'Roboto', sans-serif; /* Fonte moderna e limpa */
+   -webkit-font-smoothing: antialiased;
+    font-size: 2.7rem; /* Ajuste para o tamanho grande */
+    line-height: 1.4;  /* Espaçamento entre linhas */
+    font-weight: 300 !important; /* Deixa o texto com peso médio */
+    color: #525525;      /* Cor de texto (cinza escuro) */
+}
+
+/* Centraliza o texto em telas pequenas, mas o alinha à esquerda em telas médias/grandes */
+.hero-text {
+    text-align: center; 
+}
+
+@media (max-width: 767px) { 
+    
+    /* 1. Faz a coluna da logo voltar a aparecer e ocupar 100% da largura */
+    .row > .col-md-5 {
+        display: block !important; /* Mudei de 'none' para 'block' */
+        width: 100% !important;
+        order: -1; /* Adiciona 'order: -1' para garantir que ela venha primeiro (acima) */
+    }
+
+    /* **NOVA REGRA AQUI: Ajusta o tamanho da logo no mobile** */
+    .hero-logo {
+        max-width: 90%; /* Reduz a largura máxima para 80% do contêiner pai no mobile */
+        margin: 0 auto; /* Centraliza a imagem se ela for menor que 100% */
+        display: block; /* Garante que a margem auto funcione para centralizar */
+    }
+
+    /* 2. Faz a coluna do texto ocupar 100% da largura no mobile */
+    .row > .col-md-7 {
+        width: 100% !important;
+        margin-top: 20px; /* Adiciona um espaço entre a logo e o texto */
+    }
+
+    .hero-text,
+    .hero-text p {
+        text-align: center; 
+        font-size: 2.1rem;
+    }
+
+    .container.mt-5 {
+        margin-top: 30px !important;
+    }
+
+    /* Zera o padding no topo e na base do container principal no mobile */
+    .container.py-5 {
+        padding-top: 40px !important;
+    }
+}
+
+/*====================*/
+/* CSS para a fachada */
+/*====================*/
+
+#banner-fachada {
+    /* Garante que a imagem se ajuste perfeitamente e não fique muito alta */
+    margin-top: 25px;
+    max-height: 550px; 
+    object-fit: cover; /* Recorta a imagem para cobrir a área mantendo a proporção */
+}
+
+@media (max-width: 767px) { 
+    
+    #banner-fachada {
+        margin-top: 0 !important; /* Ajusta a margem superior para o mobile */
+        max-height: none !important; /* Remove o limite de altura para que ela possa ser maior */
+        height: 250px !important;    /* Define uma altura fixa maior para o mobile (ajuste o valor se quiser) */
+        object-fit: cover;           /* Mantém o recorte para cobrir bem */
+    }
+}
+
+
+/*========================*/
+/* CSS para a loja fisica */
+/*========================*/
+
+@media (max-width: 767px) { 
+
+    /* 1. FORÇA EMPILHAMENTO (LARGURA 100%) */
+    .row > .col-md-6 {
+        flex: 0 0 100% !important; /* Ocupa 100% da largura */
+        max-width: 100% !important; /* Garante que não ultrapasse */
+        
+        /* Adiciona um padding padrão para não colar nas bordas da tela */
+        padding-left: 15px !important; 
+        padding-right: 15px !important;
+        
+        /* Adiciona um espaçamento entre as imagens quando empilhadas */
+        margin-bottom: 20px; 
+    }
+    
+    /* 2. GARANTE A CENTRALIZAÇÃO DO CONTEÚDO */
+    .row {
+        /* Centraliza os itens do Flexbox (colunas) se a largura for menor que 100% */
+        justify-content: center !important; 
+    }
+    
+    /* 3. AJUSTE DE IMAGEM */
+    .row > .col-md-6 img {
+        width: 100% !important; 
+        height: auto;
+        
+        /* Garante que a imagem esteja centralizada dentro da coluna de 100% */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+        border-radius: 0 !important; 
+        box-shadow: none !important; 
+    }
+
+    .container-fluid.py-5 {
+        padding-top: 0 !important;
+    }
+}
+
+/*============================*/
+/*CSS para a secao de produtos*/
+/*============================*/
+
+/* Para controlar a altura das imagens dentro dos cards de produtos */
+.img-card-produtos {
+    height: 310px; /* Reduz a altura da imagem. Ajuste este valor! */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer, cortando se necessário */
+    object-position: center; /* Centraliza a imagem no corte */
+}
+
+/* Ajusta o tamanho da fonte dos textos descritivos dos cards de PRODUTOS */
+.texto-card-pequeno {
+    font-size: 1.2rem; /* Reduz o tamanho da fonte um pouco mais (de 0.95rem para 0.9rem) */
+    line-height: 1.4;
+}
+
+/* Opcional: Reduz a fonte do título do card se estiver muito grande */
+.card-title {
+    font-size: 1.7rem; /* Ajusta o tamanho do h5 padrão do Bootstrap */
+}
+
+/* Estilo para dar uma borda leve e uniforme a todos os cards de produto */
+.card {
+    border: 1px solid #e0e0e0; /* Borda cinza bem clarinha (1px de espessura) */
+    border-radius: 0.5rem; /* Opcional: mantém o canto arredondado do Bootstrap */
+    /* Garante que a sombra do shadow-sm não seja cortada */
+}
+
+@media (max-width: 767px) {
+
+    section.py-4 {
+        padding-top: 10px !important; /* Reduz o espaçamento superior */
+        margin-top: 0 !important;
+    }
+
+    .img-card-produtos {
+        height: 180px; /* Reduz de 310px para um tamanho mais compacto */
+    }
+
+    .card-title {
+        font-size: 1.3rem; 
+        line-height: 1.2;
+    }
+
+    .texto-card-pequeno {
+        font-size: 1rem; 
+        line-height: 1.3;
+    }
+
+    .row > [class*="col-"] {
+        width: 100% !important; 
+        max-width: 100% !important;
+        margin-bottom: 25px; /* Adiciona espaço entre os cards empilhados */
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+}
+
+
+/*==========================*/
+/*CSS do porque nos escolher*/
+/*==========================*/
+
+.subtitle{
+    font-size: 1.7rem;      
+    line-height: 1.4;   
+    font-family: 'fw-light', Gadget, sans-serif; 
+    color: #495057
+}
+.corpo-fonte {
+    font-size: 1.2rem;      
+    line-height: 1.6;   
+}
+
+@media (max-width: 767px) {
+    
+    /* 1. Esconde qualquer coluna (.col-md-6) que contenha uma imagem (img) */
+    /* Isso resolve a seção "Porque nos escolher" E a seção "Segurança" ao mesmo tempo */
+    .row.align-items-center.g-4 > div:has(img) {
+        display: none !important;
+    }
+
+    /* 2. Ajusta a coluna de TEXTO que sobrou (seja ela a primeira ou a última) */
+    /* Como a coluna da imagem sumiu, a do texto precisa ocupar tudo */
+    .row.align-items-center.g-4 > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        
+        /* Padding padrão para o texto não colar na borda da tela */
+        padding-left: 15px !important; 
+        padding-right: 15px !important;
+    }
+
+    /* 3. Reseta a direção da linha (não precisa mais inverter nada) */
+    .row.align-items-center.g-4 {
+        flex-direction: column !important;
+        margin: 0 !important;
+    }
+
+    /* 4. Garante que títulos e parágrafos fiquem centralizados */
+    .row.align-items-center.g-4 h2,
+    .row.align-items-center.g-4 p,
+    .row.align-items-center.g-4 .subtitle {
+        text-align: center !important;
+    }
+    
+    /* (Opcional) Mantém a regra do body para segurança */
+    body {
+        overflow-x: hidden !important;
+    }
+}
+
+
+/*=================================================*/
+/*CSS do seu projeto com a seguranca que ele merece*/
+/*=================================================*/
+
+.col-md-6.position-relative {
+    /* Garante que o contêiner das imagens tenha a altura mínima para todas aparecerem */
+    min-height: 450px; /* Ajuste se as imagens estiverem sendo cortadas ou muito espaçadas */
+}
+
+.img-sobreposta {
+    position: absolute;
+    width: 65%; /* Tamanho da imagem na composição */
+    height: auto; /* Altura automática para manter proporção */
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Transição suave para efeitos de hover, se quiser */
+}
+
+.img-sobreposta.img-main {
+    top: 5%;
+    right: 0;
+    z-index: 3; /* Coloca essa imagem no topo */
+    width: 70%; /* Ajuste o tamanho da imagem principal */
+    height: 250px; /* Altura fixa para a imagem do box */
+}
+
+.img-sobreposta.img-mid {
+    top: 40%; /* Metade da altura do contêiner */
+    left: -20%; /* Desloca da esquerda */
+    z-index: 2; /* Fica abaixo da imagem principal */
+    width: 70%; /* Ajuste o tamanho */
+    height: 275px; /* Altura fixa para a imagem do meio */
+}
+
+.img-sobreposta.img-bottom {
+    bottom: -30%;
+    right: 5%;
+    z-index: 1; /* Fica por baixo de tudo */
+    width: 70%; /* Ajuste o tamanho da imagem de baixo */
+    height: 225px; /* Altura fixa para a imagem de baixo */
+}
+
+/* Estilo customizado para o botão de Chamada para Ação (FALE COM UM ESPECIALISTA) */
+.btn-custom-cta {
+    /* Cor GOATED Azul - Mantenha o azul vibrante */
+    background-color: #007bff; 
+    border-color: #007bff;
+    color: white;
+    
+    /* Formato PÍLULA: Border-radius alto para arredondar totalmente */
+    border-radius: 50px; /* Um valor alto garante a forma de pílula */
+    font-size: 1.5rem; /* Aumenta o tamanho da fonte (maior que o padrão lg) */
+    padding: 18px 40px; /* Aumenta o padding para o botão parecer grande e robusto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito Hover */
+.btn-custom-cta:hover {
+    background-color: #0056b3; 
+    border-color: #0056b3;
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra no hover */
+}
+
+.texto-seguranca{
+font-size: 1.2rem;
+line-height: 1.6;
+}
+
+.titulo-seguranca{
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.subtitle-seguranca{
+    font-size: 1.7rem;      
+    line-height: 1.4;   
+    font-family: 'fw-light', Gadget, sans-serif; 
+    color: #495057
+}
+
+@media (max-width: 767px) {
+    
+    /* Pega a segunda coluna (.col-md-6:last-child) onde estão as fotos e remove da tela */
+    .row.align-items-center.g-4 > .col-md-6:last-child {
+        display: none !important;
+    }
+    .titulo-seguranca {
+        font-size: 1.8rem; /* Reduz o tamanho do Título (era 2.4rem) */
+    }
+
+    .subtitle-seguranca{
+    font-size: 1.4rem;      
+    line-height: 1.4;   
+    font-family: 'fw-light', Gadget, sans-serif; 
+    color: #495057
+}
+    .row.align-items-center.g-4 > .col-md-6:first-child {
+        width: 100% !important; /* Ocupa a largura toda */
+        text-align: center !important; /* Centraliza tudo */
+        padding-left: 15px !important; /* Mantém um respiro nas bordas */
+        padding-right: 15px !important;
+    }
+
+    section.container.py-5 {
+        padding-top: 10px !important; 
+        padding-bottom: 10px !important; 
+    }
+
+    .row.align-items-center.g-4 .btn-custom-cta {
+        display: block !important;
+        width: 90%;
+        font-size: 1.2rem; 
+        padding: 12px 25px; 
+        margin: 30px auto 0 auto !important; /* Centraliza o botão */
+    }
+
+    .row.align-items-center.g-4 .w-75,
+    .row.align-items-center.g-4 .w-75 p {
+        width: 100% !important;
+        text-align: center !important;
+    }
+}
+
+
+/*======================*/
+/*CSS para a localizacao*/
+/*======================*/
+
+#localizacaoAtalho {
+    padding-top: 80px !important; 
+    padding-bottom: 80px !important; /* Mantém o padding de baixo grande também, se necessário */
+}
+
+.titulo-localizacao{
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+@media (max-width: 767px) {
+    .titulo-localizacao{
+    font-size: 1.8rem;
+    text-align: center;
+}
+}
+
+
+/*======================*/
+/*CSS para as avaliacoes*/
+/*======================*/
+
+/* APLICAR ESTAS REGRAS PARA ALINHAR O RODAPÉ DO CLIENTE */
+.card-review {
+    /* 1. FLEXBOX: Transforma o card em um container Flex vertical */
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #2a3035 !important; 
+    color: #ffffff; 
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1),
+                0 4px 6px rgba(0, 0, 0, 0.08); 
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Opcional: Efeito de 'flutuar' quando o mouse passa */
+.card-review:hover {
+    transform: translateY(-5px); 
+    /* A borda fica mais nítida no hover */
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); 
+}
+
+#feedback h2 {
+    /* Garante que o título seja grande e impactante */
+    font-size: 2.4rem; 
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Estrelas */
+.card-review .text-warning {
+    /* Garante que as estrelas sejam grandes */
+    font-size: 1.8rem !important;
+}
+
+/* Corpo do Texto da Avaliação */
+.card-review .card-text {
+    flex-grow: 1; 
+    
+    /* Regras visuais já existentes: */
+    color: #f1f1f1 !important; 
+    font-size: 1rem;
+    line-height: 1.4;
+    font-style: italic;
+    margin-top: 10px;
+    min-height: 100px; 
+}
+
+/* Estilos para as imagens de avatar dos clientes */
+.card-review .d-flex img {
+    filter: blur(0.5px); 
+    transition: filter 0.3s ease-in-out;
+}
+
+/* ============================================================ */
+/* CSS PRO V2 - CORREÇÃO: ESPAÇAMENTO FOTO/TEXTO            */
+/* ============================================================ */
+
+@media (max-width: 767px) {
+
+    #feedback [class*="col-"] {
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .card-review h3, .card-review h4, .card-review h5, .card-review .card-title {
+        font-size: 1.4rem !important;
+        line-height: 1.2 !important;
+        text-align: center; 
+        word-break: break-word;
+        hyphens: auto;
+    }
+
+    .card-review .card-text {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        text-align: center; 
+        min-height: auto !important;
+    }
+
+    .card-review .d-flex img {
+        width: 45px !important;
+        height: 45px !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+        display: block !important;
+        /* Remove margens da própria imagem para o gap funcionar limpo */
+        margin: 0 !important; 
+    }
+
+    .card-review .d-flex.align-items-center {
+        /* Joga tudo para a esquerda */
+        justify-content: flex-start !important; 
+        gap: 15px !important; /* Cria um espaço forçado de 15px entre a foto e o texto */
+        /* Remove padding e margens externas que criam o buraco preto */
+        padding-left: 0 !important; 
+        margin-left: 0 !important;
+        width: 100% !important;
+        margin-top: 15px !important;
+    }
+
+    /* 5. TEXTO DO NOME E DATA */
+    .card-review .ms-3 {
+        /* Garante que o texto fique alinhado à esquerda */
+        text-align: left !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+        
+        /* Zera a margem aqui, pois o 'gap' acima já resolve o espaço */
+        margin-left: 0 !important; 
+        margin-right: 0 !important;
+    }
+
+    /* Tira margens extras dos textos pequenos */
+    .card-review .small {
+        margin: 0 !important;
+        width: auto !important;
+    }
+
+    /* Centraliza as estrelas e título H2 */
+    .card-review .text-warning { text-align: center; display: block; }
+    #feedback h2 { font-size: 1.8rem; text-align: center; }
+}
+
+
+/*=================*/
+/*CSS para o footer*/
+/*=================*/
+
+.main-footer {
+    background-color: #010153;
+    color: #f1f1f1;
+    padding-top: 30px; /* Espaçamento após a linha azul */
+    padding-bottom: 30px;
+}
+
+/* Container do Conteúdo para alinhamento Flexbox */
+.footer-content-custom {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    flex-wrap: wrap; 
+}
+
+/* Estilo para Direitos Autorais na área principal */
+.footer-copyright {
+    /* Garante que o bloco não force a quebra de linha em telas grandes */
+    min-width: 250px; 
+    /* Adiciona margem para centralizar o texto no bloco*/
+    text-align: center; 
+    /* Ajuste o alinhamento vertical se necessário */
+    align-self: center;
+}
+
+.footer-copyright .copyright-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.5;
+    /* Adiciona uma margem superior para espaçar bem, caso o footer-info quebre */
+    margin-top: 20px; 
+}
+
+
+.footer-info { 
+ display: contents; 
+}
+/* Ajuste para que Contatos fique mais à esquerda */
+.footer-content-custom {
+    display: flex;
+    /* Use 'space-between' para forçar Contatos e Redes Sociais para as bordas */
+    justify-content: space-between; 
+    align-items: flex-start;
+    flex-wrap: wrap; 
+}
+
+
+.footer-contacts {
+    margin-bottom: 20px;
+}
+
+.footer-hours {
+ margin-bottom: 20px;
+ margin-left: 30px; 
+}
+
+.footer-contacts h2, .footer-hours h2 {
+    font-size: 1.5em; /* Tamanho do título */
+    margin-bottom: 15px;
+    letter-spacing: 1px; /* Espaçamento leve para simular o negrito/maiúsculo */
+}
+
+.footer-contacts p, .footer-hours p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.footer-social {
+ text-align: center; 
+ min-width: 250px; 
+}
+
+.social-text {
+    font-size: 1em;
+    font-weight: 400; /* Negrito (bold) */
+    margin-bottom: 15px;
+}
+
+/* ... */
+.social-icons {
+ display: flex; justify-content: center; 
+ gap: 15px; /* Espaço entre os ícones */
+}
+
+.icon-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 30px; /* Tamanho dos ícones */
+    transition: color 0.3s;
+}
+
+/* Estilo do Facebook */
+.facebook-icon .fab {
+    /* Define a cor azul padrão do Facebook */
+    color: #4267B2; 
+    /* Garante que ele tenha o mesmo tamanho que o Instagram */
+    font-size: 40px;
+    /* Remove a regra de preenchimento do texto para que a cor funcione */
+    -webkit-text-fill-color: initial;
+    background-clip: initial;
+}
+
+.facebook-icon:hover {
+    color: #3b5a9a; /* Escurece um pouco no hover */
+}
+
+/* NOVO CSS para o fundo dos ícones sociais */
+.social-icon-wrapper {
+    display: flex; /* Para centralizar o ícone dentro */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 50px; /* Largura do círculo */
+    height: 50px; /* Altura do círculo */
+    border-radius: 50%; /* Faz ser um círculo */
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Sombra sutil para profundidade */
+}
+
+/* Efeito ao passar o mouse */
+.social-icon-wrapper:hover {
+    transform: translateY(-3px)scale(1.05); /* Pequeno "salto" */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); /* Sombra mais pronunciada */
+}
+
+/* Ajustes para o tamanho do ícone dentro do wrapper*/
+.social-icon-wrapper .fab {
+    font-size: 28px !important; /* Ajusta o tamanho do ícone dentro do círculo */
+    -webkit-background-clip: initial !important; 
+    background-clip: initial !important; 
+    -webkit-text-fill-color: initial !important;
+    color: initial;
+}
+
+@media (max-width: 767px) {
+  
+    /* 1. COMPACTA O CONTAINER AZUL PRINCIPAL */
+    .main-footer {
+        /* Reduzimos o padding drasticamente para diminuir a altura total */
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    /* 2. EMPILHAMENTO E ALINHAMENTO */
+    .footer-content-custom {
+        flex-direction: column !important; 
+        align-items: center !important; 
+        text-align: center; 
+    }
+
+    /* Zera a margem lateral dos horários */
+    .footer-hours {
+        margin-left: 0 !important;
+    }
+
+    /* 3. REDUZ O ESPAÇO ENTRE OS BLOCOS (CONTATOS, HORÁRIOS, SOCIAL) */
+    .footer-contacts, 
+    .footer-hours,
+    .footer-copyright, 
+    .footer-social {
+        width: 100% !important; 
+        min-width: auto !important;
+        margin-bottom: 15px !important; 
+    }
+
+    /* 4. AJUSTE FINO DE TÍTULOS E PARÁGRAFOS (PARA ECONOMIZAR ESPAÇO VERTICAL) */
+    .footer-contacts h2, .footer-hours h2 {
+        font-size: 1.2em !important; /* Diminui um pouco a fonte do título */
+        margin-bottom: 5px !important; /* Cola o título no texto abaixo */
+    }
+
+    .footer-contacts p, .footer-hours p {
+        margin: 2px 0 !important; /* Aproxima as linhas de texto */
+    }
+
+    /* Ajuste dos ícones sociais */
+    .footer-social .social-icons {
+        justify-content: center !important; 
+        margin-top: 10px; 
+    }
+
+    /* 5. COPYRIGHT COMPACTO */
+    .footer-copyright {
+        order: 10; 
+        margin-top: 10px !important;
+        margin-bottom: 0 !important; /* Remove margem final do último item */
+    }
+    
+    .footer-copyright .copyright-text {
+        margin-top: 5px !important; /* Aproxima o texto de copyright */
+        font-size: 0.8rem; /* Fonte levemente menor */
+    }
+}
