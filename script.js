@@ -7,6 +7,11 @@ const btnFechar = document.querySelector('.fechar');
 
 // Adiciona o evento de clique para cada imagem encontrada
 imagensGaleria.forEach(imagem => {
+
+    if (imagem.src.includes('localizacao.png')) {
+        return; 
+    }
+
     imagem.addEventListener('click', function() {
         modal.classList.add('aberto');
         imgExpandida.src = this.src;   // Pega a foto clicada
