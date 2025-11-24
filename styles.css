@@ -103,6 +103,53 @@ body, html {
     text-align: center; 
 }
 
+.row.g-5 img {
+    cursor: pointer; /* Mostra a mãozinha */
+    transition: transform 0.3s ease; /* Suaviza o zoom */
+}
+
+.row.g-5 img:hover {
+    transform: scale(1.03); /* Leve zoom ao passar o mouse */
+    filter: brightness(0.9); 
+}
+
+/* Estilo do Modal (Fundo preto) */
+.modal {
+    display: none; /* Começa escondido */
+    position: fixed;
+    z-index: 9999; /* Garante que fique em cima de tudo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo escuro */
+    align-items: center;     /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.modal.aberto {
+    display: flex;
+}
+
+.modal-conteudo {
+    max-width: 90%;
+    max-height: 90vh; /* Altura máxima de 90% da tela */
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    object-fit: contain; /* Garante que a imagem não distorça */
+}
+
+.fechar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+}
+
 @media (max-width: 767px) { 
     
     /* Faz a coluna da logo voltar a aparecer e ocupar 100% da largura */
