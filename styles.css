@@ -37,7 +37,7 @@ body, html {
 }
 
 .nav-pills .nav-link {
-    background-color: #f8f9fa; /* FUNDO CINZA CLARO (Este é o código da box) */
+    background-color: #f8f9fa; /* FUNDO CINZA CLARO */
     border-radius: 6px;        /* Bordas arredondadas */
     margin-right: 12px;        /* Espaçamento entre os links */
     padding: 8px 16px;         /* Aumenta a área da box */
@@ -105,21 +105,20 @@ body, html {
 
 @media (max-width: 767px) { 
     
-    /* 1. Faz a coluna da logo voltar a aparecer e ocupar 100% da largura */
+    /* Faz a coluna da logo voltar a aparecer e ocupar 100% da largura */
     .row > .col-md-5 {
         display: block !important; /* Mudei de 'none' para 'block' */
         width: 100% !important;
         order: -1; /* Adiciona 'order: -1' para garantir que ela venha primeiro (acima) */
     }
 
-    /* **NOVA REGRA AQUI: Ajusta o tamanho da logo no mobile** */
     .hero-logo {
         max-width: 90%; /* Reduz a largura máxima para 80% do contêiner pai no mobile */
         margin: 0 auto; /* Centraliza a imagem se ela for menor que 100% */
         display: block; /* Garante que a margem auto funcione para centralizar */
     }
 
-    /* 2. Faz a coluna do texto ocupar 100% da largura no mobile */
+    /* Faz a coluna do texto ocupar 100% da largura no mobile */
     .row > .col-md-7 {
         width: 100% !important;
         margin-top: 20px; /* Adiciona um espaço entre a logo e o texto */
@@ -169,7 +168,7 @@ body, html {
 
 @media (max-width: 767px) { 
 
-    /* 1. FORÇA EMPILHAMENTO (LARGURA 100%) */
+    /* FORÇA EMPILHAMENTO (LARGURA 100%) */
     .row > .col-md-6 {
         flex: 0 0 100% !important; /* Ocupa 100% da largura */
         max-width: 100% !important; /* Garante que não ultrapasse */
@@ -182,13 +181,13 @@ body, html {
         margin-bottom: 20px; 
     }
     
-    /* 2. GARANTE A CENTRALIZAÇÃO DO CONTEÚDO */
+    /* GARANTE A CENTRALIZAÇÃO DO CONTEÚDO */
     .row {
         /* Centraliza os itens do Flexbox (colunas) se a largura for menor que 100% */
         justify-content: center !important; 
     }
     
-    /* 3. AJUSTE DE IMAGEM */
+    /* AJUSTE DE IMAGEM */
     .row > .col-md-6 img {
         width: 100% !important; 
         height: auto;
@@ -286,13 +285,13 @@ body, html {
 
 @media (max-width: 767px) {
     
-    /* 1. Esconde qualquer coluna (.col-md-6) que contenha uma imagem (img) */
+    /* Esconde qualquer coluna (.col-md-6) que contenha uma imagem (img) */
     /* Isso resolve a seção "Porque nos escolher" E a seção "Segurança" ao mesmo tempo */
     .row.align-items-center.g-4 > div:has(img) {
         display: none !important;
     }
 
-    /* 2. Ajusta a coluna de TEXTO que sobrou (seja ela a primeira ou a última) */
+    /* Ajusta a coluna de TEXTO que sobrou (seja ela a primeira ou a última) */
     /* Como a coluna da imagem sumiu, a do texto precisa ocupar tudo */
     .row.align-items-center.g-4 > div {
         width: 100% !important;
@@ -304,20 +303,20 @@ body, html {
         padding-right: 15px !important;
     }
 
-    /* 3. Reseta a direção da linha (não precisa mais inverter nada) */
+    /* Reseta a direção da linha (não precisa mais inverter nada) */
     .row.align-items-center.g-4 {
         flex-direction: column !important;
         margin: 0 !important;
     }
 
-    /* 4. Garante que títulos e parágrafos fiquem centralizados */
+    /* Garante que títulos e parágrafos fiquem centralizados */
     .row.align-items-center.g-4 h2,
     .row.align-items-center.g-4 p,
     .row.align-items-center.g-4 .subtitle {
         text-align: center !important;
     }
     
-    /* (Opcional) Mantém a regra do body para segurança */
+    /* Mantém a regra do body para segurança */
     body {
         overflow-x: hidden !important;
     }
@@ -372,7 +371,7 @@ body, html {
     border-color: #007bff;
     color: white;
     
-    /* Formato PÍLULA: Border-radius alto para arredondar totalmente */
+    /* Border-radius alto para arredondar totalmente */
     border-radius: 50px; /* Um valor alto garante a forma de pílula */
     font-size: 1.5rem; /* Aumenta o tamanho da fonte (maior que o padrão lg) */
     padding: 18px 40px; /* Aumenta o padding para o botão parecer grande e robusto */
@@ -479,7 +478,7 @@ line-height: 1.6;
 
 /* APLICAR ESTAS REGRAS PARA ALINHAR O RODAPÉ DO CLIENTE */
 .card-review {
-    /* 1. FLEXBOX: Transforma o card em um container Flex vertical */
+    /* Transforma o card em um container Flex vertical */
     display: flex;
     flex-direction: column;
     
@@ -492,7 +491,7 @@ line-height: 1.6;
     transition: all 0.3s ease-in-out; 
 }
 
-/* Opcional: Efeito de 'flutuar' quando o mouse passa */
+/* Efeito de 'flutuar' quando o mouse passa */
 .card-review:hover {
     transform: translateY(-5px); 
     /* A borda fica mais nítida no hover */
@@ -533,7 +532,7 @@ line-height: 1.6;
 }
 
 /* ============================================================ */
-/* CSS PRO V2 - CORREÇÃO: ESPAÇAMENTO FOTO/TEXTO            */
+/* CSS PRO V2 - ESPAÇAMENTO FOTO/TEXTO            */
 /* ============================================================ */
 
 @media (max-width: 767px) {
@@ -581,7 +580,7 @@ line-height: 1.6;
         margin-top: 15px !important;
     }
 
-    /* 5. TEXTO DO NOME E DATA */
+    /* TEXTO DO NOME E DATA */
     .card-review .ms-3 {
         /* Garante que o texto fique alinhado à esquerda */
         text-align: left !important;
@@ -747,14 +746,14 @@ line-height: 1.6;
 
 @media (max-width: 767px) {
   
-    /* 1. COMPACTA O CONTAINER AZUL PRINCIPAL */
+    /* COMPACTA O CONTAINER AZUL PRINCIPAL */
     .main-footer {
         /* Reduzimos o padding drasticamente para diminuir a altura total */
         padding-top: 15px !important;
         padding-bottom: 15px !important;
     }
 
-    /* 2. EMPILHAMENTO E ALINHAMENTO */
+    /* EMPILHAMENTO E ALINHAMENTO */
     .footer-content-custom {
         flex-direction: column !important; 
         align-items: center !important; 
@@ -766,7 +765,7 @@ line-height: 1.6;
         margin-left: 0 !important;
     }
 
-    /* 3. REDUZ O ESPAÇO ENTRE OS BLOCOS (CONTATOS, HORÁRIOS, SOCIAL) */
+    /* REDUZ O ESPAÇO ENTRE OS BLOCOS (CONTATOS, HORÁRIOS, SOCIAL) */
     .footer-contacts, 
     .footer-hours,
     .footer-copyright, 
@@ -776,7 +775,7 @@ line-height: 1.6;
         margin-bottom: 15px !important; 
     }
 
-    /* 4. AJUSTE FINO DE TÍTULOS E PARÁGRAFOS (PARA ECONOMIZAR ESPAÇO VERTICAL) */
+    /* AJUSTE FINO DE TÍTULOS E PARÁGRAFOS (PARA ECONOMIZAR ESPAÇO VERTICAL) */
     .footer-contacts h2, .footer-hours h2 {
         font-size: 1.2em !important; /* Diminui um pouco a fonte do título */
         margin-bottom: 5px !important; /* Cola o título no texto abaixo */
@@ -792,7 +791,7 @@ line-height: 1.6;
         margin-top: 10px; 
     }
 
-    /* 5. COPYRIGHT COMPACTO */
+    /* COPYRIGHT COMPACTO */
     .footer-copyright {
         order: 10; 
         margin-top: 10px !important;
